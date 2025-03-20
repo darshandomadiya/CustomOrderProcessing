@@ -8,11 +8,11 @@ The **DarshanDomadiya_CustomOrderProcessing** module enhances the Magento 2 orde
 - An **email notification system** for shipped orders.
 
 ## Features
-✅ **Order Status Update via API** - Allows external systems to update order status.
-✅ **Event Observer** - Captures order status changes and logs them.
-✅ **Database Logging** - Stores order status history in a custom table.
-✅ **Email Notifications** - Sends an email when an order is marked as shipped.
-✅ **Magento 2 Best Practices** - Uses Dependency Injection, PSR-4, and repository patterns.
+- ✅ **Order Status Update via API** - Allows external systems to update order status.
+- ✅ **Event Observer** - Captures order status changes and logs them.
+- ✅ **Database Logging** - Stores order status history in a custom table.
+- ✅ **Email Notifications** - Sends an email when an order is marked as shipped.
+- ✅ **Magento 2 Best Practices** - Uses Dependency Injection, PSR-4, and repository patterns.
 
 ## Installation
 ### 1. Upload the Module
