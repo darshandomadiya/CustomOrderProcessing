@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework/ObjectManager/etc/config.xsd">
+    
+    <!-- Define Factory Generation -->
+    <type name="DarshanDomadiya\CustomOrderProcessing\Model\OrderStatusLog">
+        <argument name="data" xsi:type="array">{}</argument>
+    </type>
+
+    <!-- Define Resource Model Injection -->
+    <type name="DarshanDomadiya\CustomOrderProcessing\Model\ResourceModel\OrderStatusLog">
+        <arguments>
+            <argument name="resource" xsi:type="object">Magento\Framework\App\ResourceConnection</argument>
+        </arguments>
+    </type>
+
+    <!-- Register OrderStatusLogFactory -->
+    <type name="DarshanDomadiya\CustomOrderProcessing\Model\OrderStatusLogFactory">
+        <arguments>
+            <argument name="objectManager" xsi:type="object">Magento\Framework\ObjectManagerInterface</argument>
+        </arguments>
+    </type>
+
+    <!-- Define Logger Dependency -->
+    <type name="DarshanDomadiya\CustomOrderProcessing\Observer\OrderStatusChange">
+        <arguments>
+            <argument name="logger" xsi:type="object">Psr\Log\LoggerInterface</argument>
+            <argument name="orderStatusLogFactory" xsi:type="object">DarshanDomadiya\CustomOrderProcessing\Model\OrderStatusLogFactory</argument>
+            <argument name="orderStatusLogResource" xsi:type="object">DarshanDomadiya\CustomOrderProcessing\Model\ResourceModel\OrderStatusLog</argument>
+            <argument name="transportBuilder" xsi:type="object">Magento\Framework\Mail\Template\TransportBuilder</argument>
+            <argument name="storeManager" xsi:type="object">Magento\Store\Model\StoreManagerInterface</argument>
+        </arguments>
+    </type>
+
+</config>
