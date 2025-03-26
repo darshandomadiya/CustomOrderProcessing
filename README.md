@@ -87,7 +87,7 @@ app/design/frontend/DarshanDomadiya/theme/Magento_Sales/email/order_shipped.html
 ```
 
 ## Run Tests
-You can modify email templates by editing:
+You can run test:
 ```
 vendor/bin/phpunit --testsuite=unit
 ```
