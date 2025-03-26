@@ -86,6 +86,12 @@ You can modify email templates by editing:
 app/design/frontend/DarshanDomadiya/theme/Magento_Sales/email/order_shipped.html
 ```
 
+## Run Tests
+You can modify email templates by editing:
+```
+vendor/bin/phpunit --testsuite=unit
+```
+
 ## Uninstallation
 To remove the module, run:
 ```

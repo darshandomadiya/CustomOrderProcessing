@@ -6,5 +6,9 @@
         <resources>
             <resource ref="Magento_Sales::sales"/>
         </resources>
+        <data>
+            <parameter name="orderIncrementId" force="true" xsi:type="string" />
+            <parameter name="status" force="true" xsi:type="string" />
+        </data>
     </route>
 </routes>
