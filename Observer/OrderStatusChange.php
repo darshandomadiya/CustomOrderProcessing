@@ -58,7 +58,7 @@ class OrderStatusChange implements ObserverInterface
                 $this->sendShipmentNotification($order);
             }
 
-            $this->logger->info("Order status updated for Order #{$order->getIncrementId()} from {$oldStatus} to {$newStatus}");
+            $this->logger->info("Order status updated for Order ID #{$order->getIncrementId()} from {$oldStatus} to {$newStatus}");
         } catch (LocalizedException $e) {
             $this->logger->error('LocalizedException: ' . $e->getMessage());
         } catch (\Exception $e) {
